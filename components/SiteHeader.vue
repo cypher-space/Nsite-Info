@@ -134,7 +134,7 @@ const navLinkClass = (path) => {
 }
 
 .logo-invert {
-  filter: invert(1) contrast(1.06) drop-shadow(0 0 10px var(--accent-purple-glow));
+  filter: drop-shadow(0 0 10px var(--accent-purple-glow));
 }
 
 .header-brand {
