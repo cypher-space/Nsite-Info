@@ -1,10 +1,17 @@
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
-  title: "Nuxstack",
+  title: "Nsite Info",
 
   compatibilityDate: "2025-12-01",
 
   vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        'shaders/vue'
+      ]
+    },
     vue: {
       customElement: true
     },
@@ -15,7 +22,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Nuxtstack"
+      title: "Nsite Info"
     }
   },
 

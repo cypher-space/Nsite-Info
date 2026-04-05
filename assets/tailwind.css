@@ -1,8 +1,183 @@
 @import "tailwindcss";
 
-* {
-  @apply text-purple-950;
+:root {
+  --color-bg: #f7f7f5;
+  --color-fg: #111111;
+  --color-soft: #5f5f5b;
+  --color-line: rgba(17, 17, 17, 0.12);
+  --color-card: rgba(255, 255, 255, 0.78);
+  --color-card-strong: #ffffff;
+  --color-code: #111111;
+  --accent-purple: #7c3aed;
+  --accent-purple-soft: rgba(124, 58, 237, 0.32);
+  --accent-purple-glow: rgba(124, 58, 237, 0.52);
+  --body-grad-a: rgba(0, 0, 0, 0.045);
+  --body-grad-b: rgba(0, 0, 0, 0.03);
+  --ink-panel-line: rgba(255, 255, 255, 0.18);
+  --ink-panel-soft: rgba(255, 255, 255, 0.66);
+  --hero-line: rgba(17, 17, 17, 0.16);
+  --hero-soft: rgba(17, 17, 17, 0.72);
+  --hero-title: #111111;
+  --hero-copy: rgba(17, 17, 17, 0.86);
+  --hero-action-bg: rgba(255, 255, 255, 0.88);
+  --hero-action-fg: #111111;
+  --hero-action-line: rgba(17, 17, 17, 0.22);
 }
+
+[data-theme='dark'] {
+  --color-bg: #090909;
+  --color-fg: #f5f5f1;
+  --color-soft: #9d9d97;
+  --color-line: rgba(245, 245, 241, 0.14);
+  --color-card: rgba(255, 255, 255, 0.04);
+  --color-card-strong: #121212;
+  --color-code: #050505;
+  --accent-purple: #c4b5fd;
+  --accent-purple-soft: rgba(196, 181, 253, 0.34);
+  --accent-purple-glow: rgba(196, 181, 253, 0.56);
+  --body-grad-a: rgba(255, 255, 255, 0.08);
+  --body-grad-b: rgba(255, 255, 255, 0.045);
+  --ink-panel-line: rgba(0, 0, 0, 0.16);
+  --ink-panel-soft: rgba(0, 0, 0, 0.62);
+  --hero-line: rgba(245, 245, 241, 0.18);
+  --hero-soft: rgba(255, 255, 255, 0.72);
+  --hero-title: #ffffff;
+  --hero-copy: rgba(255, 255, 255, 0.88);
+  --hero-action-bg: rgba(255, 255, 255, 0.12);
+  --hero-action-fg: #ffffff;
+  --hero-action-line: rgba(255, 255, 255, 0.24);
+}
+
+html,
+body,
+#__nuxt {
+  min-height: 100%;
+}
+
+body {
+  color: var(--color-fg);
+  background:
+    radial-gradient(circle at 12% 8%, var(--body-grad-a), transparent 34%),
+    radial-gradient(circle at 88% 82%, var(--body-grad-b), transparent 32%),
+    radial-gradient(circle at 55% 35%, rgba(127, 127, 127, 0.05), transparent 40%),
+    var(--color-bg);
+  background-size: auto;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Instrument Serif", "Iowan Old Style", serif;
+  letter-spacing: -0.03em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 a {
-  @apply accent-purple-900 underline hover:no-underline;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-purple-soft);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+input,
+textarea {
+  color: var(--color-fg);
+}
+
+::selection {
+  background: var(--accent-purple-soft);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 2px;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.surface {
+  background: var(--color-card);
+  backdrop-filter: blur(10px);
+}
+
+.surface-strong {
+  background: var(--color-card-strong);
+}
+
+.hero-banner {
+  background-image: url('/hero-light.svg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 0 1px var(--accent-purple-soft), 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .hero-banner {
+  background-image: url('/hero-dark.svg');
+}
+
+.hero-title {
+  color: var(--hero-title);
+}
+
+.hero-copy {
+  color: var(--hero-copy);
+}
+
+.hero-action {
+  background: var(--hero-action-bg);
+  color: var(--hero-action-fg);
+  border: 1px solid var(--hero-action-line);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.hero-action:hover {
+  opacity: 0.86;
+  transform: translateY(-1px);
+}
+
+.ink-panel {
+  background: var(--color-fg);
+  color: var(--color-bg);
+}
+
+.ink-panel-soft {
+  color: var(--ink-panel-soft);
+}
+
+.ink-panel-line {
+  border-color: var(--ink-panel-line);
+}
+
+pre,
+code {
+  font-family: "SFMono-Regular", "Menlo", "Monaco", monospace;
+}
+
+pre {
+  background: var(--color-code);
+  color: var(--color-bg);
 }
