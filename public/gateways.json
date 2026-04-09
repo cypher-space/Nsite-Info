@@ -1,0 +1,143 @@
+{
+  "updatedAt": "2026-04-09",
+  "contribution": {
+    "message": "Hey! If you run a gateway, commit your URL and support matrix to this file.",
+    "file": "public/gateways.json"
+  },
+  "gateways": [
+    {
+      "name": "nsite.lol",
+      "host": "nsite.lol",
+      "url": "https://nsite.lol",
+      "type": "Community",
+      "supports": {
+        "nsite": true,
+        "napps": true,
+        "napplets": false
+      },
+      "notes": "Public gateway and index surface for many deployed sites."
+    },
+    {
+      "name": "nsite.run",
+      "host": "nsite.run",
+      "url": "https://nsite.run",
+      "type": "Community",
+      "supports": {
+        "nsite": true,
+        "napps": true,
+        "napplets": false
+      },
+      "notes": "Public gateway with deployment and tooling ecosystem."
+    },
+    {
+      "name": "nsite.cloud",
+      "host": "nsite.cloud",
+      "url": "https://nsite.cloud",
+      "type": "Community",
+      "supports": {
+        "nsite": true,
+        "napps": true,
+        "napplets": false
+      },
+      "notes": "Official Nsite cloud gateway domain."
+    },
+    {
+      "name": "ditto.pub",
+      "host": "ditto.pub",
+      "url": "https://ditto.pub",
+      "type": "Client",
+      "supports": {
+        "nsite": true,
+        "napps": true,
+        "napplets": false
+      },
+      "notes": "Ditto client endpoint in the broader Nsite/Napps ecosystem."
+    },
+    {
+      "name": "nwb.tf",
+      "host": "nwb.tf",
+      "url": "https://nwb.tf",
+      "type": "Community",
+      "supports": {
+        "nsite": true,
+        "napps": true,
+        "napplets": false
+      },
+      "notes": "Community gateway and index endpoint with Nsite resolution."
+    },
+    {
+      "name": "nosto.re",
+      "host": "nosto.re",
+      "url": "https://nosto.re",
+      "type": "Community",
+      "supports": {
+        "nsite": true,
+        "napps": true,
+        "napplets": false
+      },
+      "notes": "Community gateway domain with intermittent behavior in public checks."
+    },
+    {
+      "name": "nostrdeploy.com",
+      "host": "nostrdeploy.com",
+      "url": "https://nostrdeploy.com",
+      "type": "Community",
+      "supports": {
+        "nsite": true,
+        "napps": true,
+        "napplets": false
+      },
+      "notes": "Historically listed gateway; currently observed as degraded."
+    }
+  ],
+  "repos": [
+    {
+      "name": "nsite.run",
+      "url": "https://github.com/sandwichfarm/nsite.run",
+      "kind": "Gateway",
+      "maintained": true
+    },
+    {
+      "name": "nsite-gateway",
+      "url": "https://github.com/hzrd149/nsite-gateway",
+      "kind": "Gateway",
+      "maintained": true
+    },
+    {
+      "name": "nsite-manager",
+      "url": "https://github.com/hzrd149/nsite-manager",
+      "kind": "Management",
+      "maintained": true
+    },
+    {
+      "name": "nsyte",
+      "url": "https://github.com/sandwichfarm/nsyte",
+      "kind": "CLI",
+      "maintained": true
+    },
+    {
+      "name": "nsite-cli",
+      "url": "https://github.com/flox1an/nsite-cli",
+      "kind": "CLI",
+      "maintained": true
+    },
+    {
+      "name": "nsite-action",
+      "url": "https://github.com/sandwichfarm/nsite-action",
+      "kind": "CI/CD",
+      "maintained": true
+    },
+    {
+      "name": "nostr-deploy-server",
+      "url": "https://github.com/sepehr-safari/nostr-deploy-server",
+      "kind": "Gateway/Server",
+      "maintained": true
+    },
+    {
+      "name": "nostr-deploy-cli",
+      "url": "https://github.com/sepehr-safari/nostr-deploy-cli",
+      "kind": "CLI",
+      "maintained": true
+    }
+  ]
+}
